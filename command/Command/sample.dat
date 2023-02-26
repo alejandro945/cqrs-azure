@@ -1,5 +1,5 @@
 {
-    "ID": "1",
-    "FistName": "Alejandro",
-    "Age": 19
+    "id": 1,
+    "name": "Alejandro",
+    "age": 20
 }

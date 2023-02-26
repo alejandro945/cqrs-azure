@@ -16,10 +16,10 @@ module.exports = async function (context, req) {
       });
   
       // Creating person in write database
-      await pool.query`INSERT INTO Persons (ID, FirstName, Age) VALUES (${req.body.id}, ${req.body.name}, ${req.body.age})`;
+      await pool.request().query`INSERT INTO Persons (ID, FirstName, Age) VALUES (${req.body.id}, ${req.body.name}, ${req.body.age})`;
       res.status(201).json({ mensaje: 'Registro creado correctamente' });;
     } catch (error) {
-      console.error(error);
+      context.log(error);
       res.status(500).json({ error: 'Error creating person' });
     }
 }

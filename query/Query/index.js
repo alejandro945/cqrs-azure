@@ -21,6 +21,7 @@ module.exports = async function (context, _) {
         // Responder con un mensaje de éxito
         context.res = { status: 200, body: result.recordset };
     } catch (error) {
+        context.log(error)
         // Si ocurre un error, responder con el mensaje de error
         context.res = { status: 500, body: error.message };
     }
