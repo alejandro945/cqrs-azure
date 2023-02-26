@@ -1,0 +1,2 @@
+project = "cqrs"
+location = "eastus"
